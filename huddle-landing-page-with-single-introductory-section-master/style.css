@@ -1,11 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(257, 40%, 49%) url("./images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  /* background-position: left; */
+  background-attachment: fixed;
+  background-size: contain;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Poppins, sans-serif;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo img {
+  width: 120px;
+  height: 120px;
+}
+
+.img-container {
+    max-width: 400px;
+    margin: auto;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.text {
+    margin-top: 2rem;
+    line-height: 1.5;
+}
+
+.btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: hsl(257, 40%, 49%);
+    padding: 1.2rem 7rem;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 2rem;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.4) ;
+    transition: all .3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: hsl(300, 69%, 71%);
+    color: #fff;
+}
+
+.btn:active {
+    transform: scale(98%);
 }
 
 .attribution {
@@ -14,4 +85,31 @@ html {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        text-align: left;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        padding: 0 5rem;
+    }
+
+    .img-container {
+        max-width: 1000px;
+        margin: 0;
+    }
+
+    .text {
+        width: 50%;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        letter-spacing: 0.5px;
+        margin-bottom: 1.5rem;
+    }
 }
